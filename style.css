@@ -131,7 +131,7 @@ select {
     color: #ff6f47;
     width: 10rem;
     cursor: pointer;
-    padding: 0.8rem;
+    padding: 1rem;
 }
 
 .select::after {
