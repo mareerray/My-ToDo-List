@@ -9,6 +9,9 @@ body {
     color: white;
     font-family: "poppins", sans-serif;
     min-height: 100vh;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 20px;
 }
 
 header {
@@ -16,22 +19,21 @@ header {
 }
 
 header, form {
-    min-height: 20vh;
-    display: flex;
-    justify-content: center;
+    min-height: 10vh;
+    justify-content: start;
     align-items: center;
 }
 
 form input, form button {
-    padding: 0.5rem;
     font-size: 2rem;
     border: none;
     background: white;
 }
 
-form button {
+button {
     color: #d88771;
-    background: white;
+    /* background: #d88771; */
+    position: relative;
     cursor: pointer;
     transition: all 0.3 ease;
 }
@@ -45,11 +47,14 @@ form button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    padding: 1rem;
 }
 
 .todo-list {
     min-width: 30%;
     list-style: none;
+    width: 100%;
 }
 
 .todo {
@@ -99,6 +104,12 @@ form button:hover {
     opacity: 0;
 }
 
+.filter-todo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -109,7 +120,7 @@ select {
 
 .select {
     margin: 1rem;
-    position: relative;
+    position: fixed;
     overflow: hidden;
 }
 
@@ -117,7 +128,7 @@ select {
     color: #ff6f47;
     width: 10rem;
     cursor: pointer;
-    padding: 1rem;
+    padding: 0.8rem;
 }
 
 .select::after {
@@ -134,4 +145,54 @@ select {
 .select:hover::after {
     background: white;
     color: #ff6f47;
+}
+
+/* For smaller screens (e.g., mobile devices) */
+@media only screen and (max-width: 768px) {
+    .todo-container {
+        flex-direction: column; /* Stack elements vertically */
+    }
+    .todo-list {
+        width: 90%; /* Adjust width for smaller screens */
+        margin: auto; /* Center the list */
+    }
+}
+
+/* For tablets or larger screens */
+@media only screen and (min-width: 769px) {
+    .todo-container {
+        flex-direction: row; /* Display elements horizontally */
+    }
+}
+
+
+/* For smaller screens (e.g., mobile devices) */
+@media only screen and (max-width: 768px) {
+    form input, form button {
+        padding: 0.3rem;
+        font-size: 1.5rem;
+    }
+}
+
+/* For even smaller screens (e.g., very small mobile devices) */
+@media only screen and (max-width: 480px) {
+    form input, form button {
+        padding: 0.2rem;
+        font-size: 1rem;
+    }
+}
+
+/* For smaller screens (e.g., mobile devices) */
+@media only screen and (max-width: 768px) {
+    .filter-todo {
+        justify-content: start; /* Align to the left */
+    }
+}
+
+/* For even smaller screens (e.g., very small mobile devices) */
+@media only screen and (max-width: 480px) {
+    .filter-todo {
+        flex-direction: column; /* Stack vertically if needed */
+        align-items: start; /* Align to the left */
+    }
 }
