@@ -24,17 +24,20 @@ header, form {
     align-items: center;
 }
 
+
 form input, form button {
     font-size: 2rem;
+    height: 3rem;
     border: none;
     background: white;
 }
 
-button {
+form button {
     color: #d88771;
     /* background: #d88771; */
     position: relative;
     cursor: pointer;
+    width: 3rem;
     transition: all 0.3 ease;
 }
 
@@ -48,7 +51,7 @@ form button:hover {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .todo-list {
@@ -158,27 +161,22 @@ select {
     }
 }
 
-/* For tablets or larger screens */
-@media only screen and (min-width: 769px) {
-    .todo-container {
-        flex-direction: row; /* Display elements horizontally */
-    }
-}
 
 
-/* For smaller screens (e.g., mobile devices) */
+
+/* For smaller screens (e.g., mobile devices)
 @media only screen and (max-width: 768px) {
     form input, form button {
         padding: 0.3rem;
         font-size: 1.5rem;
     }
-}
+} */
 
 /* For even smaller screens (e.g., very small mobile devices) */
 @media only screen and (max-width: 480px) {
     form input, form button {
-        padding: 0.2rem;
-        font-size: 1rem;
+        padding: 0.3rem;
+        font-size: 1.5rem;
     }
 }
 
